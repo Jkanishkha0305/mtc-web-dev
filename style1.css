@@ -1,0 +1,383 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+body{
+    margin: 0;
+    background-color: rgb(248, 246, 246);
+}
+@media only screen and (max-width:480px){
+    body{
+        font-size: 12px;
+    }
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8em;
+    box-shadow: 0 3px 4px rgba(0, 0,0,0.1);
+    background-color: white;
+    position:sticky;
+    /* *used to position the header at the top of the website */  
+    top: 0;
+    z-index: 10;
+    /* *to keep the element in front*/
+}
+
+
+.tabs li{
+    list-style: none; /**to remove the dots from the list*/
+    font-size: 1.2em; 
+    cursor: pointer;/**change the cursor to a pointer*/
+}
+
+.tabs{
+    align-self: center; /**to center them vertically*/
+    display: flex;
+    justify-content: space-between; /**keep space in between the lis*/
+    width: 40%;/**elements sticks together so increase the distance between them*/
+    color: blueviolet;
+}
+
+header .name{
+    color: #653abd;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1024px){
+    header{
+        padding: 0 4em;
+    }
+}
+@media only screen and (max-width: 769px){
+    header{
+        padding: 0;
+        justify-content: center;
+        
+    }
+    .tabs{
+        display: none;
+    }
+    
+}
+.page{
+    margin-top: 6em;
+    margin-left: 12em;
+    margin-right: 6em;
+}
+.profile{
+    display: flex;
+}
+.personal{
+    width: 30em;
+}
+.profilePic{
+    
+    margin-left: 4em;
+    opacity: 80%;
+    border-radius: 4em;
+    object-fit: cover;
+    
+}
+.personal h1{
+    margin: 0;
+    font-size: 3em;
+    
+}
+.personal h3{
+    margin-top: 1.8em;
+    color: gray;
+}
+
+
+.profile button{
+    margin-top: 4em;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+   
+}
+
+.profilePic:hover{
+    opacity: 60%;
+    translate: 1em;
+    transition: all ;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+}
+
+.profile button:hover{
+    opacity: 60%;
+    transition: all;
+    transition-duration: 200ms;
+    
+}
+@media only screen and (max-width:769px){
+    .profile{
+        flex-direction: column-reverse;
+        
+    }
+    .personal{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1em;
+    }
+    .personal h3{
+        padding: 0 0.5em;
+    }
+    .profilePic{
+       align-self:center;
+        margin-left: 0;
+    }
+    .profilePic:hover{
+        translate: 0;
+        
+    }
+}
+@media only screen and (max-width: 1201px){
+    .page{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+@media only screen and (max-width: 769px){
+    .page{
+        margin-top: 2em;
+    }
+}
+@media only screen and (max-width: 480px){
+    .personal h1{
+        font-size: 2em;
+    }
+    .profilePic{
+        width: 90vw;
+    }.personal h3{
+        width: 90vw;
+    }
+}
+.logos{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 4em;
+}
+
+.logos img{
+    
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    margin: auto;
+    box-shadow: 6px 12px 12px  rgba(0,0,0,0.1);
+}
+.skills h1, .projects h1{
+    font-size: 2.5em;
+    background-image: linear-gradient(45deg, blue, purple);
+    width: fit-content;
+    background-clip:text;
+    color:transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+}
+@media only screen and (max-width:1440px){
+    .logos{
+        padding: 0;
+    }
+    .logos img{
+        height: 180px;
+        width: 180px;
+    }
+}
+@media only screen and (max-width:1201px){
+    .logos{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4em;
+    }
+}
+
+@media only screen and (max-width:769px){
+    
+    .logos{
+        grid-template-columns: 1fr 1fr ;
+        width: fit-content;   
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.projects img{
+    height: 500px;
+    width: 450px;
+    object-fit: cover;
+}
+
+.projectCards{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right:auto;
+    width: fit-content;
+    gap: 2em;
+}
+.projects h5{
+    color: gray;
+}
+.projects h3{
+    font-size: 2em;
+    margin: 0;
+}
+
+
+.projects .description{
+    color: gray;
+    padding: 0;
+    font-weight: 200;
+}
+.projects button{
+    padding:1em;
+    border: 1px solid purple;
+    cursor: pointer;
+    color: purple;
+}
+
+.projects button:hover{
+    background-color: #653abd;
+    color: white;
+    border-color: #653abd;
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+}
+@media only screen and (max-width:1024px){
+    .projects img{
+        width: 45vw;
+    }
+}
+@media only screen and (max-width:769px){
+    .projectCards{
+        grid-template-columns: max-content;
+    }
+    .projects .description{
+        width: 75vw;
+    }
+    .projects img{
+        width: 75vw;
+    }
+}
+
+.contact{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h2{
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.contactForm form{
+    display:flex;
+    flex-direction: column;
+    width: 30em;
+}
+.contactForm label{
+    font-size: 0.8em;
+    margin: 0.3em 0;
+}
+.contactForm input, .contactForm textarea{
+    margin-bottom: 1em;
+    padding: 1em;
+    border: none;
+}
+
+.submit-btn{
+    margin-top: 1em;
+    background-color: #653abd;
+    color:white;
+    border:none;
+}
+@media only screen and (max-width: 769px){
+    .contactForm form{
+        width: 70vw;
+    }
+} 
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 20;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup .prj{
+    
+    background-color: white;
+    width: 90%;
+    height: 90%;
+}
+.arrowIcon{
+    position:fixed;
+    bottom: 3em;
+    right: 3em;
+    border-radius: 50%;
+    background-color:transparent;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 4px 5px rgb(0,0,0,.2);
+    
+}
+.social-media-icons{
+    align-self: center;
+    position:fixed;
+    bottom: 6em;
+    right: 3em;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0.5em;
+    height: 0;
+   
+    overflow: hidden;
+    border-radius: 1.5em;
+    transition: all;
+    transition-delay: 100ms;
+    transition-duration:250ms;
+    transition-timing-function: ease-in;
+    
+}
+
+.social-media-icons img{
+    box-shadow: 0 4px 5px rgb(0,0,0,.2);
+    border-radius: 0.2em;
+    margin-top: 1em;
+    padding: 0.2em;
+    background-color: white;
+}
+.closeIcon{
+    position:fixed;
+    bottom:3em;
+    right: 3.6em;
+    display: none;
+    cursor: pointer;
+}

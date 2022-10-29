@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1 class="name">KAUSHIK DEKA</h1>
+    <ul class="tabs">
+        <li><a onclick="scrollDiv('about')">About</a></li>
+        <li><a onclick="scrollDiv('skills')">Skills</a></li>
+        <li><a onclick="scrollDiv('projects')">Projects</a></li>
+        <li><a onclick="scrollDiv('contact')">Contact</a></li>
+    </ul>
+    <img src="./menu.png" height="20px" class="menuIcon"  onclick="menuHandler()">
+    
+</header>
+<body>
+  <div class="menu show" id="menu">
+    <a onclick="scrollDiv('about')" class="aboutmenu">About</a>
+    <a onclick="scrollDiv('skills')">Skills</a>
+    <a onclick="scrollDiv('projects')">Projects</a>
+    <a onclick="scrollDiv('contact')">Contact</a>
+  </div>
+    <div class="page" id="about">
+        <div class="profile"  >
+            <div class="personal">
+                <h1>Welcome To</h1>
+                <h1>My Personal Portfolio</h1>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h3>
+                <button>Learn More</button>
+            </div>
+            <img src="./profile-5.jpg" width="350px" height="350px" class="profilePic">
+        
+        </div>
+        <div class="skills" id="skills">
+            <h1>SKILLS</h1>
+            <div class="logos">
+                <img class="aq" src="./htmllogo.png">
+            <img class="aq" src="./csslogo.png">
+            <img class="aq" src="./Javascript-shield.svg">
+            <img class="aq" src="./react.png">    
+            </div>
+            
+        </div>
+
+          <div class="projects" id="projects">
+              <h1>PROJECTS</h1>
+              <div class="projectCards">
+                  <div class="card">
+                      <img src="./project1.png" width="450px" height="430px">
+                      <h5>Wev-app</h5>
+                      <h3>Task Manager</h3>
+                      <h4 class="description">DLorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!</h4>
+                      <h4><button href="./">Check it Out</button></h4>
+                  </div>
+                  <div class="card">
+                      <img src="./project2.png" width="500px" height="480px">
+                      <h5>Wev-app</h5>
+                      <h3>Task Manager</h3>
+                      <h4 class="description">DLorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!</h4>
+                      <h4><button href="./">Check it Out</button></h4>
+                  </div>
+                  <div class="card">
+                      <img src="./projectPic.png" width="500px" height="480px">
+                      <h5>Wev-app</h5>
+                      <h3>Task Manager</h3>
+                      <h4 class="description">DLorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!</h4>
+                      <h4><button href="./">Check it Out</button></h4>
+                  </div>
+                  <div class="card">
+                    <img src="./project4.png" width="500px" height="480px">
+                    <h5>Wev-app</h5>
+                    <h3>Task Manager</h3>
+                    <h4 class="description">DLorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!</h4>
+                    <h4><button href="./">Check it Out</button></h4>
+                    </div>
+                   
+                </div>
+              </div>
+              
+          </div>
+
+        <div class="contact" id="contact">
+            <h2>Get In Touch With Me</h2>
+            <div class="contact-form-container">
+              <div class="contact-form">
+                <form action="https://formspree.io/f/xyylngw" method="POST">
+                  <div class="form-control">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="sender-name"
+                      placeholder="Enter Your Name"
+                      class="input-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="sender-email"
+                      placeholder="Enter Your Email"
+                      class="input-field"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      cols="60"
+                      rows="10"
+                      placeholder="Enter Your Message"
+                      name="message"
+                      class="input-field"
+                      required
+                    ></textarea>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Submit"
+                    id="submit-btn"
+                    class="submit-btn"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="up-arrow">
+      <img class="arrowIcon" id="arrowIcon"src="./up-arrow.png" height="50px" width="50px" onClick="openSocialTab()"}>
+    </div>
+    <div class="social-media-icons" id="socialMediaIcons">
+      <a href="https://github.com/Kaushikdkrikhanu"><img src="./github (2).png" height="35px" width="35px"></a>
+      <a href="https://www.linkedin.com/in/kaushik-deka-74980b190/"><img src="./linkedin (1).png" height="35px" width="35px"></a>
+      <a href="https://twitter.com/Kaushik04916594"><img src="./twitter (1).png" height="35px" width="35px"></a>
+    </div>
+    <div class="close">
+      <img class="closeIcon" id="closeIcon" src="./close.png" height="30px" width="30px" onClick="openSocialTab()">
+    </div>
+    <script>
+        function scrollDiv(xd){
+            var elem = document.getElementById(xd);
+            console.log("dasdasdas",elem);
+            window.scrollTo(0,findPosition(elem)-100);
+            
+        }
+        function findPosition(obj) {
+                var currenttop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        currenttop += obj.offsetTop;
+                    } while ((obj = obj.offsetParent));
+                    return [currenttop];
+                }
+            }
+        function menuHandler(){
+            console.log("menuHandler",document.getElementById("menu").classList.toggle("show"));
+            
+        }    
+        isOpen = false;
+      function openSocialTab(){
+        if(!isOpen){
+          document.getElementById("socialMediaIcons").style.height="180px";
+          console.log(document.getElementById("socialMediaIcons").className);
+          document.getElementById("arrowIcon").style.display="none";
+          document.getElementById("closeIcon").style.display="block";
+          isOpen =true;
+        }
+        else{
+          document.getElementById("socialMediaIcons").style.height = "0";
+          document.getElementById("arrowIcon").style.display="block";
+          document.getElementById("closeIcon").style.display="none";
+          isOpen=false;
+
+        }
+        console.log(isOpen);
+      }
+
+        
+    </script>
+</body>
+</html>
